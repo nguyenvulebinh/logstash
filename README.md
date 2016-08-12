@@ -70,9 +70,10 @@
           }
       }
       ```
-      - Cấu hình Elasticsearch và Kibana xem lại tài liệu [2], [3]
+      Lưu ý: Cách sử dụng grok patterns xem thêm tài liệu [4]
+    - Cấu hình Elasticsearch và Kibana xem lại tài liệu [2], [3]
       
-      Sau khi đã cấu hình xong, ta tiến hành khởi chạy lần lượt các thành phần:
+    Sau khi đã cấu hình xong, ta tiến hành khởi chạy lần lượt các thành phần:
       
       ```
       #Khởi chạy Elasticsearch
@@ -88,9 +89,9 @@
       sudo /etc/init.d/filebeat start
       ```
       
-      Khi các thành phần đã chạy, ta vào các file log và tiến hành ghi thêm các thông tin vào để test thử. Ví dụ ta điền vào file "logstash-tutorial.log" nội dung "asdasd id 19: a a c v d e temp 70oC a d g j ư humidity 90%", điền vào file "nguyenbinh.log" nội dung "asdasd id 1: a a c v d e temp 20oC a d g j humidity 40%". Ta vào Kibana Sence (Xem tài liệu 2) để kiểm tra thì kết quả sẽ được như hình. Như ta có thể thấy, Logstash đã tách được các thông tin về id, nhiệt độ và độ ẩm từ log ta điền vào.
+    Khi các thành phần đã chạy, ta vào các file log và tiến hành ghi thêm các thông tin vào để test thử. Ví dụ ta điền vào file "logstash-tutorial.log" nội dung "asdasd id 19: a a c v d e temp 70oC a d g j ư humidity 90%", điền vào file "nguyenbinh.log" nội dung "asdasd id 1: a a c v d e temp 20oC a d g j humidity 40%". Ta vào Kibana Sence (Xem tài liệu 2) để kiểm tra thì kết quả sẽ được như hình. Như ta có thể thấy, Logstash đã tách được các thông tin về id, nhiệt độ và độ ẩm từ log ta điền vào.
       
-      ![alt tag](https://github.com/nguyenvulebinh/logstash/blob/master/Screenshot%20from%202016-08-12%2018-19-39.png)
+    ![alt tag](https://github.com/nguyenvulebinh/logstash/blob/master/Screenshot%20from%202016-08-12%2018-19-39.png)
       
 ##Tài liệu tham khảo
 
@@ -99,3 +100,5 @@
 [2] https://github.com/nguyenvulebinh/elasticsearch
 
 [3] https://github.com/nguyenvulebinh/beats_elasticsearch
+
+[4] http://grokconstructor.appspot.com/do/match
